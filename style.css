@@ -1,5 +1,5 @@
 /* =========================================================
-   ÉCHO — FINAL WEBSITE STYLES
+   ÉCHO — FINAL CLEAN STYLES
 ========================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Italiana&display=swap');
@@ -191,7 +191,7 @@ button {
 }
 
 
-/* LOGO */
+/* HEADER LOGO */
 
 .logo {
   position: relative;
@@ -293,7 +293,7 @@ button {
 }
 
 
-/* HEADER ACTIONS */
+/* HEADER RIGHT */
 
 .header-actions {
   display: flex;
@@ -369,6 +369,7 @@ button {
   transition:
     background 0.3s ease,
     color 0.3s ease,
+    border-color 0.3s ease,
     transform 0.3s ease;
 }
 
@@ -387,11 +388,17 @@ button {
 
   color: #ffffff;
 
+  border-color: var(--brown);
+
   transform: translateY(-2px);
 }
 
 .mobile-menu-button {
   display: none;
+
+  justify-self: end;
+
+  padding: 8px;
 
   border: 0;
 
@@ -451,15 +458,14 @@ button {
 
 /*
    IMPORTANT:
-   NO CSS LOGO ON HERO.
-   Logo already exists inside hero photograph.
+   NO GENERATED BOTTLE
+   NO GENERATED ÉCHO TEXT
 */
 
 .hero-background::before,
 .hero-background::after {
-  content: none;
-
-  display: none;
+  content: none !important;
+  display: none !important;
 }
 
 .hero-inner {
@@ -597,7 +603,7 @@ button {
 }
 
 
-/* MOOD PHOTOGRAPHS */
+/* MOOD IMAGES */
 
 .mood-image-calm {
   background-image: url("echo-calm.png");
@@ -616,7 +622,7 @@ button {
 }
 
 
-/* DARK GRADIENT FOR TEXT */
+/* MOOD TEXT */
 
 .mood-card::after {
   content: "";
@@ -705,16 +711,17 @@ button {
 }
 
 
-/* NO AUTO GENERATED LOGO */
+/*
+   NO GENERATED BOTTLE LABEL
+*/
 
 .scent-result-image::after {
-  content: none;
-
-  display: none;
+  content: none !important;
+  display: none !important;
 }
 
 
-/* SMALL PHOTO OVERLAY */
+/* LIGHT IMAGE OVERLAY ONLY */
 
 .scent-result-image::before {
   content: "";
@@ -736,7 +743,7 @@ button {
 }
 
 
-/* NUMBERS */
+/* VERTICAL NUMBERS */
 
 .vertical-number {
   position: absolute;
@@ -762,52 +769,7 @@ button {
 }
 
 
-/* =========================================================
-   BOTTLE LABEL LOGOS
-========================================================= */
-
-.bottle-logo {
-  position: absolute;
-
-  z-index: 6;
-
-  font-family: var(--serif);
-
-  font-weight: 400;
-
-  line-height: 1;
-
-  letter-spacing: 0.08em;
-
-  color: rgba(50, 37, 30, 0.92);
-
-  white-space: nowrap;
-
-  pointer-events: none;
-
-  user-select: none;
-}
-
-
-/*
-   YOUR SCENT MATCH
-   Position calculated for current AFTER DARK photograph.
-*/
-
-.bottle-logo-result {
-  left: 54%;
-
-  top: 64%;
-
-  transform: translate(-50%, -50%);
-
-  font-size: clamp(16px, 1.25vw, 22px);
-}
-
-
-/* =========================================================
-   RESULT TEXT
-========================================================= */
+/* RESULT CONTENT */
 
 .scent-result-content {
   display: flex;
@@ -1014,7 +976,20 @@ button {
 }
 
 
-/* COLLECTION PHOTOGRAPHS */
+/*
+   IMPORTANT:
+   NO ARTIFICIAL BOTTLES
+   NO ARTIFICIAL ÉCHO LABELS
+*/
+
+.product-image::before,
+.product-image::after {
+  content: none !important;
+  display: none !important;
+}
+
+
+/* PRODUCT IMAGES */
 
 .product-image-1 {
   background-image: url("echo-morning.png");
@@ -1037,79 +1012,7 @@ button {
 }
 
 
-/* REMOVE OLD AUTO TEXT */
-
-.product-image::after {
-  content: none;
-
-  display: none;
-}
-
-
-/* =========================================================
-   COLLECTION BOTTLE LOGOS
-========================================================= */
-
-/*
-   These five are independent.
-   If one needs tiny adjustment later,
-   we change only that specific class.
-*/
-
-.bottle-logo-product-1 {
-  left: 50%;
-
-  top: 52%;
-
-  transform: translate(-50%, -50%);
-
-  font-size: clamp(8px, 0.68vw, 12px);
-}
-
-.bottle-logo-product-2 {
-  left: 50%;
-
-  top: 52%;
-
-  transform: translate(-50%, -50%);
-
-  font-size: clamp(8px, 0.68vw, 12px);
-}
-
-.bottle-logo-product-3 {
-  left: 50%;
-
-  top: 52%;
-
-  transform: translate(-50%, -50%);
-
-  font-size: clamp(8px, 0.68vw, 12px);
-}
-
-.bottle-logo-product-4 {
-  left: 50%;
-
-  top: 52%;
-
-  transform: translate(-50%, -50%);
-
-  font-size: clamp(8px, 0.68vw, 12px);
-
-  color: rgba(42, 30, 25, 0.94);
-}
-
-.bottle-logo-product-5 {
-  left: 50%;
-
-  top: 52%;
-
-  transform: translate(-50%, -50%);
-
-  font-size: clamp(8px, 0.68vw, 12px);
-}
-
-
-/* COLLECTION TEXT */
+/* PRODUCT TEXT */
 
 .product-number {
   margin: 0 0 4px;
@@ -1210,7 +1113,7 @@ button {
 }
 
 
-/* STORY PHOTO */
+/* STORY IMAGE */
 
 .story-image {
   position: relative;
@@ -1235,31 +1138,15 @@ button {
 }
 
 
-/* REMOVE OLD STORY TEXT */
+/*
+   NO GENERATED BOTTLE
+   NO GENERATED ÉCHO LOGO
+*/
 
 .story-image::before,
 .story-image::after {
-  content: none;
-
-  display: none;
-}
-
-
-/*
-   STORY BOTTLE LOGO
-   Bottle is angled, therefore logo rotates too.
-*/
-
-.bottle-logo-story {
-  left: 55%;
-
-  top: 48.5%;
-
-  transform:
-    translate(-50%, -50%)
-    rotate(-8deg);
-
-  font-size: clamp(10px, 0.88vw, 16px);
+  content: none !important;
+  display: none !important;
 }
 
 .story-message {
@@ -1653,14 +1540,6 @@ button {
     font-size: 57px;
   }
 
-  .bottle-logo-result {
-    left: 54%;
-
-    top: 64%;
-
-    font-size: 17px;
-  }
-
   .scent-benefits {
     left: 0;
 
@@ -1698,14 +1577,6 @@ button {
     font-size: 9px;
   }
 
-  .bottle-logo-product-1,
-  .bottle-logo-product-2,
-  .bottle-logo-product-3,
-  .bottle-logo-product-4,
-  .bottle-logo-product-5 {
-    font-size: 8px;
-  }
-
 
   /* STORY */
 
@@ -1725,14 +1596,6 @@ button {
 
   .story-image {
     min-height: 560px;
-  }
-
-  .bottle-logo-story {
-    left: 55%;
-
-    top: 48.5%;
-
-    font-size: 11px;
   }
 
 
@@ -1790,14 +1653,6 @@ button {
 
   .product-image {
     aspect-ratio: 4 / 5;
-  }
-
-  .bottle-logo-product-1,
-  .bottle-logo-product-2,
-  .bottle-logo-product-3,
-  .bottle-logo-product-4,
-  .bottle-logo-product-5 {
-    font-size: 11px;
   }
 
 }
