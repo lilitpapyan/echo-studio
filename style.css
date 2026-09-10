@@ -1,27 +1,26 @@
 /* =========================================================
-   ÉCHO — MAIN STYLES
-   Luxury fragrance editorial website
+   ÉCHO — FINAL WEBSITE STYLES
 ========================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Italiana&display=swap');
 
 
 /* =========================================================
-   ROOT
+   VARIABLES
 ========================================================= */
 
 :root {
   --cream: #f2eee6;
   --cream-light: #f8f5ef;
-  --warm-white: #fcfaf6;
+  --white: #fcfaf6;
 
-  --charcoal: #211f1c;
-  --charcoal-soft: #34302c;
+  --dark: #211f1c;
+  --dark-soft: #34302c;
 
   --taupe: #a89e92;
   --taupe-light: #d8d0c5;
 
-  --brown: #5b463b;
+  --brown: #765143;
   --burgundy: #6c463b;
 
   --border: rgba(33, 31, 28, 0.14);
@@ -52,7 +51,7 @@ body {
   padding: 0;
 
   background: var(--cream-light);
-  color: var(--charcoal);
+  color: var(--dark);
 
   font-family: var(--sans);
   font-size: 16px;
@@ -105,8 +104,13 @@ button {
 
   text-transform: uppercase;
 
-  color: #6f665f;
+  color: #756a62;
 }
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
 
 .primary-button,
 .dark-button {
@@ -117,11 +121,14 @@ button {
 
   gap: 22px;
 
-  min-height: 52px;
+  min-height: 54px;
 
-  padding: 15px 24px;
+  padding: 15px 26px;
 
-  border: 1px solid var(--charcoal);
+  border: 1px solid var(--dark);
+
+  background: var(--dark);
+  color: var(--white);
 
   font-size: 10px;
   font-weight: 600;
@@ -136,23 +143,17 @@ button {
     transform 0.3s ease;
 }
 
-.primary-button,
-.dark-button {
-  background: var(--charcoal);
-  color: var(--warm-white);
-}
-
 .primary-button:hover,
 .dark-button:hover {
   background: transparent;
-  color: var(--charcoal);
+  color: var(--dark);
 
   transform: translateY(-2px);
 }
 
 
 /* =========================================================
-   HEADER — NEW DESIGN
+   HEADER
 ========================================================= */
 
 .site-header {
@@ -173,7 +174,6 @@ button {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 }
-
 
 .header-inner {
   min-height: 126px;
@@ -215,7 +215,6 @@ button {
   color: #302821;
 }
 
-
 .logo::after {
   content: "A FRAGRANCE EXPERIENCE";
 
@@ -251,7 +250,6 @@ button {
   gap: clamp(26px, 3.2vw, 55px);
 }
 
-
 .desktop-nav a {
   position: relative;
 
@@ -268,10 +266,7 @@ button {
   text-transform: uppercase;
 
   color: #5c5149;
-
-  transition: color 0.3s ease;
 }
-
 
 .desktop-nav a::after {
   content: "";
@@ -289,25 +284,16 @@ button {
   transition: width 0.3s ease;
 }
 
-
-.desktop-nav a:hover {
-  color: #332923;
-}
-
-
 .desktop-nav a:hover::after {
   width: 100%;
 }
-
-
-/* Give HOME the elegant active underline */
 
 .desktop-nav a:first-child::after {
   width: 100%;
 }
 
 
-/* RIGHT SIDE */
+/* HEADER ACTIONS */
 
 .header-actions {
   display: flex;
@@ -317,7 +303,6 @@ button {
 
   gap: 0;
 }
-
 
 .icon-button {
   position: relative;
@@ -330,9 +315,9 @@ button {
   align-items: center;
   justify-content: center;
 
-  padding: 0;
-
   margin-right: 27px;
+
+  padding: 0;
 
   border: 0;
 
@@ -340,13 +325,8 @@ button {
 
   font-size: 24px;
 
-  line-height: 1;
-
-  color: #332a24;
-
   cursor: pointer;
 }
-
 
 .icon-button::after {
   content: "";
@@ -362,9 +342,6 @@ button {
   background: rgba(75, 57, 48, 0.18);
 }
 
-
-/* FIND YOUR SCENT BUTTON */
-
 .header-button {
   min-width: 205px;
   min-height: 54px;
@@ -378,15 +355,12 @@ button {
 
   background: transparent;
 
-  color: #765143;
+  color: var(--brown);
 
   border: 1px solid #8c6657;
 
   font-size: 9px;
-
   font-weight: 600;
-
-  line-height: 1;
 
   letter-spacing: 0.19em;
 
@@ -395,10 +369,8 @@ button {
   transition:
     background 0.3s ease,
     color 0.3s ease,
-    border-color 0.3s ease,
     transform 0.3s ease;
 }
-
 
 .header-button::after {
   content: "→";
@@ -408,28 +380,18 @@ button {
   font-size: 16px;
 
   font-weight: 300;
-
-  line-height: 1;
 }
 
-
 .header-button:hover {
-  background: #765143;
+  background: var(--brown);
 
-  color: #fff;
-
-  border-color: #765143;
+  color: #ffffff;
 
   transform: translateY(-2px);
 }
 
-
 .mobile-menu-button {
   display: none;
-
-  justify-self: end;
-
-  padding: 8px;
 
   border: 0;
 
@@ -439,7 +401,6 @@ button {
 
   cursor: pointer;
 }
-
 
 .mobile-nav {
   display: none;
@@ -461,50 +422,44 @@ button {
 
   align-items: center;
 
-  background: #d8d0c4;
+  background: #d6c9bb;
 }
-
 
 .hero-background {
   position: absolute;
+
   inset: 0;
 
   background-image:
     linear-gradient(
       90deg,
-      rgba(248, 245, 239, 0.95) 0%,
-      rgba(248, 245, 239, 0.82) 28%,
-      rgba(248, 245, 239, 0.38) 48%,
-      rgba(248, 245, 239, 0.08) 66%,
-      rgba(248, 245, 239, 0) 78%
+      rgba(248, 245, 239, 0.96) 0%,
+      rgba(248, 245, 239, 0.85) 27%,
+      rgba(248, 245, 239, 0.46) 45%,
+      rgba(248, 245, 239, 0.10) 61%,
+      rgba(248, 245, 239, 0) 76%
     ),
     url("echo-hero.png");
 
   background-size: cover;
+
   background-position: center center;
+
   background-repeat: no-repeat;
 }
 
-.hero-background::before {
-  content: none;
-  display: none;
-}
 
+/*
+   IMPORTANT:
+   NO CSS LOGO ON HERO.
+   Logo already exists inside hero photograph.
+*/
+
+.hero-background::before,
 .hero-background::after {
-  content: "ÉCHO";
-  position: absolute;
-  right: 15.2%;
-  top: 53.5%;
-  transform: translate(50%, -50%);
-  z-index: 1;
+  content: none;
 
-  font-family: var(--serif);
-  font-size: clamp(12px, 1.1vw, 19px);
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: 0.12em;
-  color: rgba(45, 35, 30, 0.92);
-  pointer-events: none;
+  display: none;
 }
 
 .hero-inner {
@@ -513,11 +468,9 @@ button {
   z-index: 2;
 }
 
-
 .hero-content {
-  width: min(590px, 52%);
+  width: min(610px, 52%);
 }
-
 
 .hero-title {
   margin: 0 0 28px;
@@ -533,7 +486,6 @@ button {
   letter-spacing: -0.035em;
 }
 
-
 .hero-title em {
   font-family: Georgia, "Times New Roman", serif;
 
@@ -541,7 +493,6 @@ button {
 
   color: var(--burgundy);
 }
-
 
 .hero-description {
   max-width: 450px;
@@ -566,11 +517,9 @@ button {
   background: var(--cream-light);
 }
 
-
 .section-heading {
   margin-bottom: 62px;
 }
-
 
 .section-heading-center {
   max-width: 720px;
@@ -579,7 +528,6 @@ button {
 
   text-align: center;
 }
-
 
 .section-heading h2 {
   margin: 0 0 18px;
@@ -595,7 +543,6 @@ button {
   letter-spacing: -0.025em;
 }
 
-
 .section-heading > p:last-child {
   max-width: 520px;
 
@@ -607,6 +554,8 @@ button {
 }
 
 
+/* MOOD GRID */
+
 .mood-grid {
   display: grid;
 
@@ -614,7 +563,6 @@ button {
 
   gap: 16px;
 }
-
 
 .mood-card {
   position: relative;
@@ -632,57 +580,72 @@ button {
   text-align: left;
 }
 
-
 .mood-image {
   height: 450px;
 
-  transition: transform 0.8s cubic-bezier(.2,.7,.2,1);
-}
+  background-size: cover;
 
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  transition: transform 0.7s ease;
+}
 
 .mood-card:hover .mood-image {
-  transform: scale(1.04);
+  transform: scale(1.035);
 }
 
+
+/* MOOD PHOTOGRAPHS */
 
 .mood-image-calm {
   background-image: url("echo-calm.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .mood-image-warm {
   background-image: url("echo-warm.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .mood-image-bold {
   background-image: url("echo-bold.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .mood-image-mysterious {
   background-image: url("echo-mysterious.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+}
+
+
+/* DARK GRADIENT FOR TEXT */
+
+.mood-card::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 45% 0 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      rgba(25, 18, 15, 0.56)
+    );
+
+  pointer-events: none;
 }
 
 .mood-card-content {
   position: absolute;
 
+  z-index: 2;
+
   left: 24px;
   right: 24px;
   bottom: 24px;
 
-  color: #fff;
+  color: #ffffff;
 }
-
 
 .mood-card-content h3 {
   margin: 0;
@@ -695,7 +658,6 @@ button {
 
   letter-spacing: 0.04em;
 }
-
 
 .mood-card-content p {
   margin: 4px 0 0;
@@ -715,82 +677,137 @@ button {
 ========================================================= */
 
 .scent-result {
+  position: relative;
+
+  min-height: 760px;
+
   display: grid;
 
   grid-template-columns: 1.1fr 0.9fr;
 
-  position: relative;
-
-  min-height: 760px;
-
-  background: #c9b6a4;
+  background: #d8c5b2;
 }
-
 
 .scent-result-image {
   position: relative;
+
   min-height: 760px;
+
   overflow: hidden;
 
   background-image: url("echo-after-dark.png");
+
   background-size: cover;
+
   background-position: center center;
+
   background-repeat: no-repeat;
 }
 
-.scent-result-image::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(24, 16, 13, 0.08),
-    rgba(24, 16, 13, 0) 58%
-  );
-  pointer-events: none;
-}
+
+/* NO AUTO GENERATED LOGO */
 
 .scent-result-image::after {
-  content: "ÉCHO";
-  position: absolute;
-  left: 50%;
-  top: 57%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
+  content: none;
 
-  font-family: var(--serif);
-  font-size: clamp(15px, 1.4vw, 23px);
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: 0.12em;
-  color: rgba(42, 31, 26, 0.95);
+  display: none;
+}
+
+
+/* SMALL PHOTO OVERLAY */
+
+.scent-result-image::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(20, 14, 12, 0.08),
+      rgba(20, 14, 12, 0) 60%
+    );
+
   pointer-events: none;
 }
+
+
+/* NUMBERS */
 
 .vertical-number {
   position: absolute;
 
-  z-index: 3;
+  z-index: 5;
 
-  left: 32px;
+  left: 40px;
   top: 50%;
 
   transform: translateY(-50%);
 
   font-size: 10px;
 
-  line-height: 2.3;
+  line-height: 2.35;
 
-  letter-spacing: .12em;
+  letter-spacing: 0.12em;
 
-  color: rgba(255,255,255,.56);
+  color: rgba(255, 255, 255, 0.58);
 }
-
 
 .vertical-number strong {
-  color: #fff;
+  color: #ffffff;
 }
 
+
+/* =========================================================
+   BOTTLE LABEL LOGOS
+========================================================= */
+
+.bottle-logo {
+  position: absolute;
+
+  z-index: 6;
+
+  font-family: var(--serif);
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: 0.08em;
+
+  color: rgba(50, 37, 30, 0.92);
+
+  white-space: nowrap;
+
+  pointer-events: none;
+
+  user-select: none;
+}
+
+
+/*
+   YOUR SCENT MATCH
+   Position calculated for current AFTER DARK photograph.
+*/
+
+.bottle-logo-result {
+  left: 54%;
+
+  top: 64%;
+
+  transform: translate(-50%, -50%);
+
+  font-size: clamp(16px, 1.25vw, 22px);
+}
+
+
+/* =========================================================
+   RESULT TEXT
+========================================================= */
 
 .scent-result-content {
   display: flex;
@@ -799,81 +816,84 @@ button {
 
   justify-content: center;
 
-  padding: 90px clamp(50px, 7vw, 110px);
+  padding:
+    85px
+    clamp(55px, 7vw, 115px)
+    135px;
 
   background: #d8c5b2;
 }
-
 
 .scent-number {
   margin: 0 0 8px;
 
   font-size: 12px;
 
-  letter-spacing: .18em;
+  letter-spacing: 0.18em;
 
   text-transform: uppercase;
 }
 
-
 .scent-result-content h2 {
-  margin: 0 0 16px;
+  margin: 0 0 20px;
+
+  max-width: 520px;
 
   font-family: var(--serif);
 
-  font-size: clamp(55px, 6vw, 86px);
+  font-size: clamp(58px, 6vw, 90px);
 
   font-weight: 400;
 
-  line-height: .95;
+  line-height: 0.95;
 }
 
-
 .scent-notes {
-  margin: 0 0 32px;
+  margin: 0 0 34px;
 
   font-size: 11px;
 
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
 
   text-transform: uppercase;
 
-  color: #6c5a4e;
+  color: #736258;
 }
 
-
 .scent-quote {
-  max-width: 430px;
+  max-width: 500px;
 
-  margin: 0 0 36px;
+  margin: 0 0 38px;
 
   font-family: Georgia, "Times New Roman", serif;
 
-  font-size: clamp(22px, 2.3vw, 31px);
+  font-size: clamp(23px, 2.3vw, 32px);
 
   font-style: italic;
 
-  line-height: 1.4;
+  line-height: 1.45;
 
-  color: #44362f;
+  color: #514038;
 }
-
 
 .scent-result-content .dark-button {
   align-self: flex-start;
 }
 
 
+/* =========================================================
+   BENEFITS
+========================================================= */
+
 .scent-benefits {
   position: absolute;
 
-  left: 50%;
+  z-index: 8;
 
+  left: 50%;
   bottom: 0;
 
   transform: translateX(-50%);
-
-  z-index: 5;
 
   width: min(740px, 74%);
 
@@ -883,9 +903,8 @@ button {
 
   background: rgba(239, 230, 219, 0.96);
 
-  border-top: 1px solid rgba(54, 43, 36, .14);
+  border-top: 1px solid rgba(54, 43, 36, 0.14);
 }
-
 
 .benefit {
   min-height: 92px;
@@ -900,16 +919,13 @@ button {
   padding: 18px;
 }
 
-
 .benefit:not(:last-child) {
-  border-right: 1px solid rgba(54,43,36,.14);
+  border-right: 1px solid rgba(54, 43, 36, 0.14);
 }
-
 
 .benefit span {
   font-size: 18px;
 }
-
 
 .benefit p {
   margin: 0;
@@ -918,7 +934,7 @@ button {
 
   line-height: 1.55;
 
-  letter-spacing: .12em;
+  letter-spacing: 0.12em;
 
   text-transform: uppercase;
 }
@@ -931,9 +947,8 @@ button {
 .collection-section {
   padding: 125px 0;
 
-  background: var(--warm-white);
+  background: var(--white);
 }
-
 
 .collection-heading {
   display: flex;
@@ -941,27 +956,24 @@ button {
   align-items: flex-end;
   justify-content: space-between;
 
-  margin-bottom: 36px;
+  margin-bottom: 38px;
 }
-
 
 .collection-heading .eyebrow {
   margin: 0;
 }
 
-
 .collection-heading a {
-  font-size: 9px;
-
-  letter-spacing: .15em;
-
-  text-transform: uppercase;
+  padding-bottom: 4px;
 
   border-bottom: 1px solid currentColor;
 
-  padding-bottom: 4px;
-}
+  font-size: 9px;
 
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
 
 .collection-grid {
   display: grid;
@@ -971,59 +983,38 @@ button {
   gap: 16px;
 }
 
-
 .product-card {
   min-width: 0;
 }
 
-
 .product-image {
-  aspect-ratio: 4 / 5;
-  margin-bottom: 20px;
   position: relative;
+
+  aspect-ratio: 4 / 5;
+
+  margin-bottom: 20px;
+
   overflow: hidden;
 
   background-size: cover;
+
   background-position: center center;
+
   background-repeat: no-repeat;
 
-  transition: transform .5s ease;
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
 }
 
 .product-card:hover .product-image {
   transform: translateY(-5px);
+
+  box-shadow: 0 16px 35px rgba(42, 31, 26, 0.08);
 }
 
 
-.product-image::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(255,255,255,0) 55%,
-    rgba(30,22,18,0.03) 100%
-  );
-  pointer-events: none;
-}
-
-.product-image::after {
-  content: "ÉCHO";
-  position: absolute;
-  left: 50%;
-  top: 52.5%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-
-  font-family: var(--serif);
-  font-size: clamp(8px, 0.75vw, 13px);
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: 0.11em;
-  color: rgba(47, 36, 31, 0.92);
-  text-shadow: 0 1px 8px rgba(255,255,255,0.18);
-  pointer-events: none;
-}
+/* COLLECTION PHOTOGRAPHS */
 
 .product-image-1 {
   background-image: url("echo-morning.png");
@@ -1041,29 +1032,99 @@ button {
   background-image: url("echo-after-dark-product.png");
 }
 
-.product-image-4::after {
-  color: rgba(47, 36, 31, 0.94);
-}
-
 .product-image-5 {
   background-image: url("echo-solace.png");
 }
 
+
+/* REMOVE OLD AUTO TEXT */
+
+.product-image::after {
+  content: none;
+
+  display: none;
+}
+
+
+/* =========================================================
+   COLLECTION BOTTLE LOGOS
+========================================================= */
+
+/*
+   These five are independent.
+   If one needs tiny adjustment later,
+   we change only that specific class.
+*/
+
+.bottle-logo-product-1 {
+  left: 50%;
+
+  top: 52%;
+
+  transform: translate(-50%, -50%);
+
+  font-size: clamp(8px, 0.68vw, 12px);
+}
+
+.bottle-logo-product-2 {
+  left: 50%;
+
+  top: 52%;
+
+  transform: translate(-50%, -50%);
+
+  font-size: clamp(8px, 0.68vw, 12px);
+}
+
+.bottle-logo-product-3 {
+  left: 50%;
+
+  top: 52%;
+
+  transform: translate(-50%, -50%);
+
+  font-size: clamp(8px, 0.68vw, 12px);
+}
+
+.bottle-logo-product-4 {
+  left: 50%;
+
+  top: 52%;
+
+  transform: translate(-50%, -50%);
+
+  font-size: clamp(8px, 0.68vw, 12px);
+
+  color: rgba(42, 30, 25, 0.94);
+}
+
+.bottle-logo-product-5 {
+  left: 50%;
+
+  top: 52%;
+
+  transform: translate(-50%, -50%);
+
+  font-size: clamp(8px, 0.68vw, 12px);
+}
+
+
+/* COLLECTION TEXT */
+
 .product-number {
-  margin: 0 0 3px;
+  margin: 0 0 4px;
 
   font-size: 9px;
 
-  letter-spacing: .16em;
+  letter-spacing: 0.16em;
 
   text-transform: uppercase;
 
   color: #8b8179;
 }
 
-
 .product-card h3 {
-  margin: 0 0 4px;
+  margin: 0 0 5px;
 
   font-family: var(--serif);
 
@@ -1073,7 +1134,6 @@ button {
 
   line-height: 1.2;
 }
-
 
 .product-notes {
   margin: 0;
@@ -1098,7 +1158,6 @@ button {
   grid-template-columns: 1fr 1fr;
 }
 
-
 .story-content {
   display: flex;
 
@@ -1114,14 +1173,12 @@ button {
   background: #d5c2ad;
 }
 
-
 .story-copy {
-  max-width: 540px;
+  max-width: 550px;
 }
 
-
 .story-copy h2 {
-  margin: 0 0 28px;
+  margin: 0 0 30px;
 
   font-family: var(--serif);
 
@@ -1131,9 +1188,8 @@ button {
 
   line-height: 1.03;
 
-  letter-spacing: -.03em;
+  letter-spacing: -0.03em;
 }
-
 
 .story-copy h2 em {
   font-family: Georgia, "Times New Roman", serif;
@@ -1141,11 +1197,10 @@ button {
   color: var(--burgundy);
 }
 
-
 .story-copy > p:not(.eyebrow) {
-  max-width: 470px;
+  max-width: 480px;
 
-  margin: 0 0 34px;
+  margin: 0 0 35px;
 
   color: #62554c;
 
@@ -1155,65 +1210,77 @@ button {
 }
 
 
+/* STORY PHOTO */
+
 .story-image {
   position: relative;
+
   min-height: 720px;
+
   overflow: hidden;
 
   background-image:
     linear-gradient(
       90deg,
-      rgba(32, 23, 19, 0.06),
-      rgba(32, 23, 19, 0.02)
+      rgba(32, 23, 19, 0.04),
+      rgba(32, 23, 19, 0)
     ),
     url("echo-story.png");
 
   background-size: cover;
+
   background-position: center center;
+
   background-repeat: no-repeat;
 }
 
-.story-image::before {
+
+/* REMOVE OLD STORY TEXT */
+
+.story-image::before,
+.story-image::after {
   content: none;
+
   display: none;
 }
 
-.story-image::after {
-  content: "ÉCHO";
-  position: absolute;
-  left: 59%;
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(-8deg);
-  z-index: 2;
 
-  font-family: var(--serif);
-  font-size: clamp(10px, 1vw, 17px);
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: 0.1em;
-  color: rgba(48, 35, 29, 0.9);
-  pointer-events: none;
+/*
+   STORY BOTTLE LOGO
+   Bottle is angled, therefore logo rotates too.
+*/
+
+.bottle-logo-story {
+  left: 55%;
+
+  top: 48.5%;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(-8deg);
+
+  font-size: clamp(10px, 0.88vw, 16px);
 }
 
 .story-message {
   position: absolute;
 
-  z-index: 3;
+  z-index: 5;
 
-  left: 36px;
-  bottom: 36px;
+  left: 38px;
+  bottom: 30px;
 
   display: flex;
 
   flex-direction: column;
 
-  color: rgba(255,255,255,.7);
+  color: rgba(255, 255, 255, 0.72);
 
   font-size: 9px;
 
   line-height: 2;
 
-  letter-spacing: .2em;
+  letter-spacing: 0.2em;
 }
 
 
@@ -1224,11 +1291,10 @@ button {
 .newsletter {
   padding: 85px 0;
 
-  background: #b09b88;
+  background: #ad9986;
 
-  color: #fff;
+  color: #ffffff;
 }
-
 
 .newsletter-inner {
   display: grid;
@@ -1240,7 +1306,6 @@ button {
   gap: 70px;
 }
 
-
 .newsletter h2 {
   margin: 0 0 10px;
 
@@ -1251,24 +1316,21 @@ button {
   font-weight: 400;
 }
 
-
 .newsletter p {
-  margin: 0;
-
   max-width: 500px;
+
+  margin: 0;
 
   font-size: 13px;
 
-  color: rgba(255,255,255,.78);
+  color: rgba(255, 255, 255, 0.78);
 }
-
 
 .newsletter-form {
   display: flex;
 
-  border-bottom: 1px solid rgba(255,255,255,.68);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.68);
 }
-
 
 .newsletter-form input {
   flex: 1;
@@ -1279,20 +1341,18 @@ button {
 
   border: 0;
 
-  outline: 0;
+  outline: none;
 
   background: transparent;
 
-  color: #fff;
+  color: #ffffff;
 
   font-size: 13px;
 }
 
-
 .newsletter-form input::placeholder {
-  color: rgba(255,255,255,.72);
+  color: rgba(255, 255, 255, 0.72);
 }
-
 
 .newsletter-form button {
   padding: 15px 0 15px 30px;
@@ -1301,14 +1361,14 @@ button {
 
   background: transparent;
 
-  color: #fff;
+  color: #ffffff;
 
   cursor: pointer;
 
   font-size: 9px;
   font-weight: 600;
 
-  letter-spacing: .16em;
+  letter-spacing: 0.16em;
 }
 
 
@@ -1319,13 +1379,12 @@ button {
 .site-footer {
   padding: 46px 0;
 
-  background: #b09b88;
+  background: #ad9986;
 
-  color: rgba(255,255,255,.9);
+  color: rgba(255, 255, 255, 0.9);
 
-  border-top: 1px solid rgba(255,255,255,.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
-
 
 .footer-inner {
   display: grid;
@@ -1341,15 +1400,13 @@ button {
   gap: 35px;
 }
 
-
 .footer-logo {
   font-family: var(--serif);
 
   font-size: 28px;
 
-  letter-spacing: .12em;
+  letter-spacing: 0.12em;
 }
-
 
 .footer-tagline,
 .footer-copy {
@@ -1357,13 +1414,12 @@ button {
 
   font-size: 8px;
 
-  letter-spacing: .16em;
+  letter-spacing: 0.16em;
 
   text-transform: uppercase;
 
-  color: rgba(255,255,255,.65);
+  color: rgba(255, 255, 255, 0.65);
 }
-
 
 .footer-nav {
   display: flex;
@@ -1407,10 +1463,18 @@ button {
     padding-inline: 17px;
   }
 
-.hero-background::before {
-    content: none;
-    display: none;
+  .mood-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
+
+  .collection-grid {
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 35px 18px;
+  }
+
+}
+
 
 /* =========================================================
    MOBILE
@@ -1465,8 +1529,6 @@ button {
 
     flex-direction: column;
 
-    gap: 0;
-
     background: var(--cream-light);
 
     border-bottom: 1px solid var(--border);
@@ -1479,11 +1541,11 @@ button {
   .mobile-nav a {
     padding: 15px 0;
 
-    border-bottom: 1px solid rgba(33,31,28,.1);
+    border-bottom: 1px solid rgba(33, 31, 28, 0.1);
 
     font-size: 12px;
 
-    letter-spacing: .12em;
+    letter-spacing: 0.12em;
 
     text-transform: uppercase;
   }
@@ -1503,36 +1565,206 @@ button {
     background-image:
       linear-gradient(
         180deg,
-        rgba(248, 245, 239, 0.96) 0%,
-        rgba(248, 245, 239, 0.86) 30%,
-        rgba(248, 245, 239, 0.45) 52%,
-        rgba(248, 245, 239, 0.05) 72%,
+        rgba(248, 245, 239, 0.97) 0%,
+        rgba(248, 245, 239, 0.9) 32%,
+        rgba(248, 245, 239, 0.45) 53%,
+        rgba(248, 245, 239, 0.03) 73%,
         rgba(248, 245, 239, 0) 100%
       ),
       url("echo-hero.png");
 
-    background-size: cover;
     background-position: 68% center;
-    background-repeat: no-repeat;
   }
 
-.hero-background::before {
-    width: 220px;
-    height: 330px;
+  .hero-content {
+    width: 100%;
 
-    right: 50%;
-    top: auto;
-    bottom: 55px;
-
-    transform:
-      translateX(50%)
-      rotate(-2deg);
+    text-align: center;
   }
 
-.hero-background::after {
-    right: 13%;
-    top: 54%;
+  .hero-title {
+    font-size: clamp(52px, 15vw, 76px);
   }
+
+  .hero-description {
+    max-width: 390px;
+
+    margin-inline: auto;
+    margin-bottom: 34px;
+  }
+
+
+  /* FINDER */
+
+  .scent-finder {
+    padding: 85px 0;
+  }
+
+  .section-heading-center {
+    margin-bottom: 42px;
+  }
+
+  .section-heading h2 {
+    font-size: 44px;
+  }
+
+  .mood-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+  }
+
+  .mood-image {
+    height: 280px;
+  }
+
+  .mood-card-content {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .mood-card-content h3 {
+    font-size: 20px;
+  }
+
+
+  /* RESULT */
+
+  .scent-result {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+
+    padding-bottom: 0;
+  }
+
+  .scent-result-image {
+    min-height: 560px;
+
+    background-position: center center;
+  }
+
+  .scent-result-content {
+    padding: 65px 26px 150px;
+  }
+
+  .scent-result-content h2 {
+    font-size: 57px;
+  }
+
+  .bottle-logo-result {
+    left: 54%;
+
+    top: 64%;
+
+    font-size: 17px;
+  }
+
+  .scent-benefits {
+    left: 0;
+
+    width: 100%;
+
+    transform: none;
+  }
+
+  .benefit {
+    padding: 15px 8px;
+  }
+
+  .benefit p {
+    font-size: 7px;
+  }
+
+
+  /* COLLECTION */
+
+  .collection-section {
+    padding: 90px 0;
+  }
+
+  .collection-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px 12px;
+  }
+
+  .product-card h3 {
+    font-size: 19px;
+  }
+
+  .product-notes {
+    font-size: 9px;
+  }
+
+  .bottle-logo-product-1,
+  .bottle-logo-product-2,
+  .bottle-logo-product-3,
+  .bottle-logo-product-4,
+  .bottle-logo-product-5 {
+    font-size: 8px;
+  }
+
+
+  /* STORY */
+
+  .story-section {
+    grid-template-columns: 1fr;
+  }
+
+  .story-content {
+    min-height: 620px;
+
+    padding: 75px 24px;
+  }
+
+  .story-copy h2 {
+    font-size: 51px;
+  }
+
+  .story-image {
+    min-height: 560px;
+  }
+
+  .bottle-logo-story {
+    left: 55%;
+
+    top: 48.5%;
+
+    font-size: 11px;
+  }
+
+
+  /* NEWSLETTER */
+
+  .newsletter {
+    padding: 65px 0;
+  }
+
+  .newsletter-inner {
+    grid-template-columns: 1fr;
+
+    gap: 36px;
+  }
+
+
+  /* FOOTER */
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+
+    text-align: center;
+  }
+
+  .footer-nav {
+    justify-content: center;
+  }
+
+}
+
 
 /* =========================================================
    SMALL MOBILE
@@ -1545,15 +1777,27 @@ button {
   }
 
   .mood-image {
-    height: 330px;
+    height: 360px;
   }
 
   .collection-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .product-card h3 {
-    font-size: 18px;
+    font-size: 22px;
+  }
+
+  .product-image {
+    aspect-ratio: 4 / 5;
+  }
+
+  .bottle-logo-product-1,
+  .bottle-logo-product-2,
+  .bottle-logo-product-3,
+  .bottle-logo-product-4,
+  .bottle-logo-product-5 {
+    font-size: 11px;
   }
 
 }
